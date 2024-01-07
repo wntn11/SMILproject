@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FooDFesT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif;
+    }
+
+    body,
+    html {
+      height: 100%;
+      color: #777;
+      line-height: 1.8;
+    }
+
+    section .platform {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+      padding: 2em;
+      background-color: #000;
+      width: 95%;
+    }
+
+    .cta-buttons {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .cta-button {
+      margin-right: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      text-decoration: none;
+      background-color: #A07188;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background-color: #F0DB73;
+    }
+
+    #videoContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    #myVideo {
+      width: 100%;
+      max-width: 1050px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #myAudio {
+      width: 100%;
+      max-width: 700px;
+      margin-top: 10px;
+    }
+
+    #buttonContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+      background-image: url('nm2.jpg');
+      min-height: 100%;
+    }
+
+    /* Second image (video) */
+    .bgimg-2 {
+      background-image: url("food fest.gif");
+      min-height: 400px;
+    }
+
+    /* Third image (members) */
+    .bgimg-3 {
+      background-image: url("scene.jpg");
+      min-height: 400px;
+    }
+
+    .w3-wide {
+      letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+      cursor: pointer;
+    }
+
+    div{
+      text-align: justify;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <smil>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+          onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+        <a href="#video" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> VIDEO</a>
+        <a href="#members" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> MEMBERS</a>
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="#video" class="w3-bar-item w3-button" onclick="toggleFunction()">VIDEO</a>
+        <a href="#members" class="w3-bar-item w3-button" onclick="toggleFunction()">MEMBERS</a>
+      </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+      <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">NIGHT <span
+            class="w3-hide-small">MARKET</span> EXPERIENCES</span>
+      </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+      <h3 class="w3-center">ABOUT</h3>
+      <p class="w3-center"><em>C.B UNITY PRODUCTION TEAM</em></p>
+      <p>Welcome to "Night Market Experiences," where we take you on a captivating journey through the vibrant world of
+        night markets.
+        In this project, we explore the heart of bustling marketplaces, where the night unfolds with colors, aromas, and
+        the excitement of eager shoppers.
+        Night markets aren't just shopping spots; they are cultural hubs reflecting the uniqueness of communities
+        worldwide,
+        offering a diverse experience from street food delights to handmade crafts and entertainment.</p>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+          <p><b><i class="fa fa-user w3-margin-right"></i>CBUnity TEAM</b></p><br>
+          <img src="cibs.jpg" class="w3-round w3-image w3-hover-opacity-off" alt="Trailer" width="260" height="93">
+        </div>
+
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-hide-small w3-padding-large">
+          <br><br>
+          <p>CB Unity, our team, gets its inspiration from our playful orange cat. Like our cat brings energy, we work together with a happy vibe. 
+            Each person adds something special, making us a strong team. We're like friends, working and having fun together. 
+            CB Unity is not just a team; it's a bunch of people who really like what they do and enjoy being together, 
+            just like our orange cat brings joy to our lives.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Second Parallax Image with video Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min" id="video">
+      <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">VIDEO</span>
+      </div>
+    </div>
+
+    <div id="videoContainer">
+      <video id="myVideo" width="1000" controls="" muted="" __idm_id__="8193">
+        <source src="VEProject2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div id="buttonContainer">
+      <button id="playButton" class="controlButton">Play</button>
+      <button id="pauseButton" class="controlButton">Pause</button>
+      <button id="restartButton" class="controlButton">Restart</button>
+    </div>
+    <br><br>
+
+    <script>
+      const video = document.getElementById("myVideo");
+      const audio = document.getElementById("myAudio");
+      const playButton = document.getElementById("playButton");
+      const pauseButton = document.getElementById("pauseButton");
+      const restartButton = document.getElementById("restartButton");
+
+      playButton.addEventListener('click', mediaPlay);
+      pauseButton.addEventListener('click', mediaPause);
+      restartButton.addEventListener('click', mediaStop);
+
+      function mediaPlay() {
+        if (video) {
+          video.play();
+        }
+      }
+
+      function mediaPause() {
+        if (video) {
+          video.pause();
+        }
+      }
+
+      function mediaStop() {
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+    </script>
+
+
+
+    <!-- Third Parallax Image with video Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min" id="members">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">MEMBERS</span>
+      </div>
+    </div>
+
+    <!-- Container (member Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="video">
+      <h3 class="w3-center">CBUnity Production Teams</h3>
+      <p class="w3-center"><em>Our Production Crew<br> Click on Images</em></p><br>
+
+      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+      <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+          <img src="man.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+            alt="Aiman">
+            <div class="image-text">
+              <p><b>Name:</b> <span style="font-family: 'YourNiceFont';">Muhammad Aiman Bin Rozman</span></p>
+              <p><b>ID:</b> <span style="font-family: 'YourNiceFont';">2022971875</span></p>
+              <p><b>Role:</b> <span style="font-family: 'YourNiceFont';">Project Manager :)</span></p>
+            </div>
+        </div>
+
+        <div class="w3-col m3">
+          <img src="website.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+            alt="Haziem">
+            <div class="image-text">
+              <p><b>Name:</b> <span style="font-family: 'YourNiceFont';">Haikal Haziem Bin Zul</span></p>
+              <p><b>ID:</b> <span style="font-family: 'YourNiceFont';">2022787283</span></p>
+              <p><b>Role:</b> <span style="font-family: 'YourNiceFont';">Web Developer :)</span></p>
+            </div>
+        </div>
+
+        <div class="w3-col m3">
+          <img src="pijie.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+            alt="Norhafizie">
+            <div class="image-text">
+              <p><b>Name:</b> <span style="font-family: 'YourNiceFont';">Muhammad Norhafizie bin Mohd Isa</span></p>
+              <p><b>ID:</b> <span style="font-family: 'YourNiceFont';">2022787283</span></p>
+              <p><b>Role:</b> <span style="font-family: 'YourNiceFont';">Video Editor :)</span></p>
+            </div>
+        </div>
+
+        <div class="w3-col m3">
+          <img src="idlan.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+            alt="Idlan">
+            <div class="image-text">
+              <p><b>Name:</b> <span style="font-family: 'YourNiceFont';">Mohamad Idlan Nazmi Bin Mohammmad</span></p>
+              <p><b>ID:</b> <span style="font-family: 'YourNiceFont';">2022787283</span></p>
+              <p><b>Role:</b> <span style="font-family: 'YourNiceFont';">Script Writer :)</span></p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+      <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+          class="fa fa-remove"></i></span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+          class="w3-hover-text-green">w3.css</a></p>
+    </footer>
+
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+      // Change style of navbar on scroll
+      window.onscroll = function () {
+        myFunction()
+      };
+
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+
+  </smil>
+</body>
+
+</html>
